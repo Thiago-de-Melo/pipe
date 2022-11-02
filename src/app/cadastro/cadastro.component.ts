@@ -1,20 +1,18 @@
-import { Component } from '@angular/core';
-import { MenuItem, PrimeNGConfig } from 'primeng/api';
+import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
-  selector: 'home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'cadastro',
+  templateUrl: './cadastro.component.html',
+  styleUrls: ['./cadastro.component.css']
 })
-export class HomeComponent {
+export class CadastroComponent implements OnInit {
 
   items: MenuItem[] = [];
-  menuVisible: boolean = false;
+  
+  constructor() { }
 
-  constructor(private primengConfig: PrimeNGConfig) { }
-
-  ngOnInit() {
-    this.primengConfig.ripple = true;
+  ngOnInit(): void {
     this.items = [
       {
         label: 'Update',
@@ -36,4 +34,6 @@ export class HomeComponent {
       }
     ];
   }
+
+  
 }

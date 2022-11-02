@@ -8,17 +8,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
+import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
+import { SplitButtonModule } from 'primeng/splitbutton';
+import { SidebarModule } from 'primeng/sidebar';
+import { CadastroComponent } from './cadastro/cadastro.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +37,10 @@ import { HomeComponent } from './home/home.component';
     MaterialExampleModule,
     HttpClientModule,
     MatNativeDateModule,
-    MatButtonModule,
-    MatToolbarModule,
+    ToolbarModule,
+    ButtonModule,
+    SplitButtonModule,
+    SidebarModule
   ],
   providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}],
   bootstrap: [AppComponent]
