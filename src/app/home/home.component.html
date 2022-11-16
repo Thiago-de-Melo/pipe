@@ -1,21 +1,27 @@
-<p-toolbar id="espaco">
+<p-toolbar id="espaco" class="corFundo">
   <div class="p-toolbar-group-left">
-    <p-button type="button" (click)="menuVisible = true" icon="pi pi-arrow-right"></p-button>
-    <p-button label="New" icon="pi pi-plus"></p-button>
-    <p-button label="Upload" icon="pi pi-upload" styleClass="p-button-success"></p-button>
-
-    <i class="pi pi-bars"></i>
-
-    <p-splitButton label="Save" icon="pi pi-check" [model]="items" styleClass="p-button-warning"></p-splitButton>
+    <p-button id="botaoTobar" style="margin-right: 20px;" type="button" (click)="menuVisible = true" icon="pi pi-bars"></p-button>
+    <p-splitButton
+      id="botaoTobar"
+      label="Primary"
+      [model]="this.items"
+    ></p-splitButton>
   </div>
+
+  <div>    
+    <p style="color: black;">logo pagina</p>
+  </div>
+  
   <div class="p-toolbar-group-right">
-    <p-button icon="pi pi-search"></p-button>
-    <p-button icon="pi pi-calendar" styleClass="p-button-success"></p-button>
-    <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button>
+    <span class="p-float-label">
+      <input id="float-input" type="text" pInputText> 
+      <label for="float-input">Selecione uma tela</label>
+    </span>
+    <p-button id="botaoTobar" icon="pi pi-search"></p-button>
+    <i id="corInonUsuario" style="margin-left: 20px; height: 20px;" class="pi pi-user"></i>
   </div>
 </p-toolbar>
 
-<cadastro class="margem_toolbar"></cadastro>
 
 <p-sidebar [(visible)]="menuVisible" [baseZIndex]="10000">
   <h1 style="font-weight:normal">Left Sidebar</h1>

@@ -1,3 +1,14 @@
 #espaco ::ng-deep .p-toolbar {
     margin-bottom: 20px;
+    background-color: rgb(42, 42, 167) !important;
+}
+
+#botaoTobar ::ng-deep .p-button {
+    background: #1e6ba9 !important;
+    color: #ffffff !important;
+    border: 1px solid #2196F3 !important;
+}
+
+#corInonUsuario ::ng-deep .pi-user:before {
+    color: #ffffff !important;
 }

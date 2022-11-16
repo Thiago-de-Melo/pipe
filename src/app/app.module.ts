@@ -12,18 +12,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { CadastroModule } from './cadastro/cadastro.module';
 
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { SidebarModule } from 'primeng/sidebar';
-import { CadastroComponent } from './cadastro/cadastro.component';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    CadastroComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +40,9 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     ToolbarModule,
     ButtonModule,
     SplitButtonModule,
-    SidebarModule
+    SidebarModule,
+    CadastroModule,
+    InputTextModule
   ],
   providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}],
   bootstrap: [AppComponent]
