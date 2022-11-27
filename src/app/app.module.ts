@@ -19,6 +19,9 @@ import { ButtonModule } from 'primeng/button';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { SidebarModule } from 'primeng/sidebar';
 import { InputTextModule } from 'primeng/inputtext';
+import { ListboxModule } from 'primeng/listbox';
+import { CardModule } from 'primeng/card';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { InputTextModule } from 'primeng/inputtext';
     SplitButtonModule,
     SidebarModule,
     CadastroModule,
-    InputTextModule
+    InputTextModule,
+    ListboxModule,
+    CardModule
   ],
   providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}],
   bootstrap: [AppComponent]

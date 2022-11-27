@@ -28,3 +28,22 @@
   <p-button type="button" (click)="menuVisible = false" label="Save" styleClass="p-button-success"></p-button>
   <p-button type="button" (click)="menuVisible = false" label="Cancel" styleClass="p-button-secondary"></p-button>
 </p-sidebar>
+
+<div class="telas">
+  <div class="espacoTelas"><p>Dashboard</p></div>
+
+  <p-card id="cardMenuTelas">
+    <h2 style="text-align: center; margin-top: -10px; font-family: 'Times New Roman', Times, serif;">Abas Favoritas</h2>
+    <p-listbox [options]="gruposFavoritos" [group]="true"
+      [(ngModel)]="selectedCountries" [metaKeySelection]="false"
+      [checkbox]="false" [filter]="true" [multiple]="false"
+      [listStyle]="{'max-height':'100%'}"
+      [style]="{'width':'15rem'}">
+      <ng-template let-group pTemplate="group">
+        <div class="p-d-flex p-ai-center">
+          <span>{{group.label}}</span>
+        </div>
+      </ng-template>
+    </p-listbox>
+  </p-card>
+</div>
